@@ -3,7 +3,7 @@
 ==================================================================
 		         COLLABORATE WITH:
 
-			* ZEKARI MOHAMMED
+			* ZEKARIA MOHAMMED
 			* ABDUSELAM NURHUSSEN
 
 ==================================================================
@@ -12,7 +12,7 @@
 
 ## General Learning Objectives
 
-        * At least four different sorting algorithms
+        * Different sorting algorithms
         * What is the Big O notation, and how to evaluate the time complexity of an algorithm
         * How to select the best sorting algorithm for a given input
         * What is a stable sorting algorithm
@@ -87,64 +87,3 @@ Write in the file 3-O, the big O notations of the time complexity of the Quick s
 * in the best case
 * in the average case
 * in the worst case
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
