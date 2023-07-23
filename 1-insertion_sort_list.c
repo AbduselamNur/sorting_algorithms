@@ -9,7 +9,7 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *curr, *insrt, *pre, *tmp, *head;
+	listint_t *curr, *insrt, *pre, *head;
 
 	head = *list;
 	if (list == NULL || head == NULL || head->next == NULL)
@@ -34,15 +34,7 @@ void insertion_sort_list(listint_t **list)
 			insrt->prev = pre->prev;
 			pre->prev = insrt;
 			pre = insrt->prev;
-			tmp = head;
-			while (tmp != NULL)
-			{
-				printf("%d", tmp->n);
-				if (tmp->next != NULL)
-					printf(", ");
-				tmp = tmp->next;
-			}
-			printf("\n");
+			print_list(head);
 		}
 		curr = curr->next;
 	}
