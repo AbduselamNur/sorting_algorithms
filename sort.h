@@ -24,6 +24,8 @@ void print_list(const listint_t *list);
 
 	/*OTHER  FUNCTION*/
 int length_list(listint_t *siz);
+void recursion(int *, int, int, size_t);
+int parti(int *, int, int, size_t);
 
 	/*SORTING ALGORITHMS PROTOTYPE*/
 void bubble_sort(int *array, size_t size);
