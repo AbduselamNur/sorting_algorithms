@@ -6,7 +6,7 @@
  *
  * Return: return count
  */
-int length_list(listint_t *siz)
+int length_list(listint_t *size)
 {
 	int count = 0;
 
