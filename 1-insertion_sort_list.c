@@ -1,46 +1,59 @@
 #include "sort.h"
-
 /**
- * insertion_sort_list - insertion sort for a doubly linked list
- * @list: doubly linked list
+ * length_list - return the lenght of list
+ * @siz: List that measure
  *
- * Return: Void
+ * Return: return count
  */
+int length_list(listint_t *siz)
+{
+int count = 0;
 
+while (siz)
+{
+count++;
+siz = siz->next;
+}
+return (count);
+}
+/**
+ * insertion_sort_list - function that sort the list
+ * @list: list that sort
+ */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *curr, *insrt, *pre, *head;
+	listint_t *current = NULL;
+	listint_t *one = NULL;
+	listint_t *two = NULL;
+	listint_t *three = NULL;
+	listint_t *four = NULL;
 
-	head = *list;
-	if (head == NULL || head->next == NULL)
+	if (!list || !(*list) || length_list(*list) < 2)
 		return;
-	curr = head->next;
-	while (curr != NULL)
+	current = *list;
+	while (current)
 	{
-		insrt = curr;
-		pre = curr->prev;
-
-		while (pre != NULL && pre->n > insrt->n)
+		if (current->prev && current->n < current->prev->n)
 		{
-			pre->next = insrt->next;
-			if (insrt->next != NULL)
-				insrt->next->prev = pre;
-
-			insrt->prev = pre->prev;
-			insrt->next = pre;
-
-			if (pre->prev != NULL)
-				pre->prev->next = insrt;
+			one = current->prev->prev;
+			two = current->prev;
+			three = current;
+			four = current->next;
+			two->next = four;
+			if (four)
+				four->prev = two;
+			three->next = two;
+			three->prev = one;
+			if (one)
+				one->next = three;
 			else
-				head = insrt;
-			insrt->prev = pre->prev;
-			pre->prev = insrt;
-
-			pre = insrt->prev;
-			tmp = head;
-			print_list(list);
+			       *list = three;
+			two->prev = three;
+			current = *list;
+			print_list(*list);
+			continue;
 		}
-		curr = curr->next;
+		else
+			current = current->next;
 	}
-	*list = head;
 }
