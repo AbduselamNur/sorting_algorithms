@@ -1,20 +1,20 @@
 #include "sort.h"
 /**
  * length_list - return the lenght of list
- * @siz: List that measure
+ * @size: List that measure
  *
  * Return: return count
  */
 int length_list(listint_t *siz)
 {
-int count = 0;
+	int count = 0;
 
-while (siz)
-{
-count++;
-siz = siz->next;
-}
-return (count);
+	while (size)
+	{
+		count++;
+		size = size->next;
+	}
+	return (count);
 }
 /**
  * insertion_sort_list - function that sort the list
